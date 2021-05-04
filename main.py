@@ -68,7 +68,7 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 model = load_resnet()
 
-st.title("Otaku CNN")
+st.title("教師無し対照学習でオタクっぽいCNNを作ってみた")
 
 st.write("Image understanding with respect to a specific field (Anime) using Inception trained by SimCLR")
 
