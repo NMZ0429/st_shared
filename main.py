@@ -18,13 +18,13 @@ def load_resnet():
 
     return model
 
+@st.cache
 def preprocess(img):
     preprocess = transforms.Compose([
         transforms.Resize(360),
         transforms.ToTensor(),
         transforms.Normalize(mean=[0.7137, 0.6628, 0.6519], std=[0.2970, 0.3017, 0.2979]),
     ])
-
     batch = preprocess(img).unsqueeze(0)
 
     if torch.cuda.is_available():
@@ -70,7 +70,7 @@ model = load_resnet()
 
 st.title("Anime Image ResNet")
 
-imgfile = st.file_uploader("Upload Image", type=["png", "jpg"], accept_multiple_files=False)
+imgfile = st.file_uploader("Upload Image: (must be at least 360^2)", type=["png", "jpg"], accept_multiple_files=False)
 
 if imgfile:
     image = Image.open(imgfile)
