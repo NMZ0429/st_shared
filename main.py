@@ -69,7 +69,7 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 model = load_resnet()
 
 st.markdown(
-"# 教師無し対照学習でオタクっぽいCNNを作ってみた\n\n Image understanding with respect to a specific field (Anime) using Inception trained by SimCLR"
+"# 教師無し対照学習でオタクっぽいCNNにする\n\n Image understanding with respect to a specific field (Anime) using Inception trained by SimCLR"
 )
 
 st.markdown("対照学習でアニメ関連の画像をひたすら学習させたらCNNがオタクっぽいことを学習できるんじゃいか？")
