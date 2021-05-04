@@ -68,9 +68,12 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 model = load_resnet()
 
-st.title("教師無し対照学習でオタクっぽいCNNを作ってみた")
+st.markdown(
+"# 教師無し対照学習でオタクっぽいCNNを作ってみた\n\n Image understanding with respect to a specific field (Anime) using Inception trained by SimCLR"
+)
 
-st.write("Image understanding with respect to a specific field (Anime) using Inception trained by SimCLR")
+st.markdown("対照学習でアニメ関連の画像をひたすら学習させたらCNNがオタクっぽいことを学習できるんじゃいか？")
+
 
 imgfile = st.file_uploader("Upload Image: (must be at least 360^2)", type=["png", "jpg"], accept_multiple_files=False)
 
