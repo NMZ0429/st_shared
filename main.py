@@ -68,7 +68,9 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 model = load_resnet()
 
-st.title("Image Understanding with respect to the specific field (Anime) using Inception trained by SimCLR")
+st.title("Otaku CNN")
+
+st.write("Image understanding with respect to a specific field (Anime) using Inception trained by SimCLR")
 
 imgfile = st.file_uploader("Upload Image: (must be at least 360^2)", type=["png", "jpg"], accept_multiple_files=False)
 
