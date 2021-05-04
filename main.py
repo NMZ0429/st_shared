@@ -18,7 +18,6 @@ def load_resnet():
 
     return model
 
-@st.cache
 def preprocess(img):
     preprocess = transforms.Compose([
         transforms.Resize(360),
